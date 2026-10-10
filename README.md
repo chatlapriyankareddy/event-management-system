@@ -6,30 +6,30 @@ A complete, full-stack **Event Management System** developed with **Spring Boot 
 
 ## 🚀 Quick Start Guide
 
-### 1. Backend (`cs/`)
+### 1. Backend (`backend/`)
 The backend is built with Spring Boot, Spring Security (JWT), and JPA.
 
 ```bash
-cd cs
+cd backend
 
 # Run backend (Starts immediately with pre-seeded sample data on port 8082):
 .\mvnw.cmd spring-boot:run
 ```
 * **Port**: Runs on `http://localhost:8082` (avoids Windows port 8080 conflicts).
-* **Database**: Uses in-memory H2 database by default (zero setup). If you wish to use local MySQL, simply start MySQL and uncomment the MySQL lines in `cs/src/main/resources/application.properties`.
+* **Database**: Uses in-memory H2 database by default (zero setup). If you wish to use local MySQL, simply start MySQL and uncomment the MySQL lines in `backend/src/main/resources/application.properties`.
 * **Pre-seeded Sample Data**: On startup, sample users, events, and registrations are automatically seeded!
 
 ---
 
-### 2. Frontend (`frntd/` or `frontend/`)
+### 2. Frontend (`frontend/`)
 The frontend is built with React 19, Vite, and React Router.
 
 ```bash
-cd frntd
+cd frontend
 npm install
 npm run dev
 ```
-* **URL**: `http://localhost:5173`
+* **URL**: `http://localhost:5173` or `http://localhost:5174`
 
 ---
 

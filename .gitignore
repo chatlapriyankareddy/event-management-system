@@ -40,3 +40,9 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Local Unused Folders (Kept locally, excluded from repository)
+/cs/
+/frntd/
+/onetoone/
+
