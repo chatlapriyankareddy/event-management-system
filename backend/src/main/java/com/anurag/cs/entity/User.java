@@ -1,5 +1,6 @@
 package com.anurag.cs.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.anurag.cs.enums.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -25,6 +26,7 @@ public class User {
     private String email;
 
     @Column(nullable = false)
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     private String phone;

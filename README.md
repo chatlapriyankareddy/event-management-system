@@ -16,7 +16,7 @@ cd backend
 .\mvnw.cmd spring-boot:run
 ```
 * **Port**: Runs on `http://localhost:8082` (avoids Windows port 8080 conflicts).
-* **Database**: Uses in-memory H2 database by default (zero setup). If you wish to use local MySQL, simply start MySQL and uncomment the MySQL lines in `backend/src/main/resources/application.properties`.
+* **Database**: Uses in-memory H2 by default (zero setup). For a persistent database, set `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, and `SPRING_DATASOURCE_PASSWORD`.
 * **Pre-seeded Sample Data**: On startup, sample users, events, and registrations are automatically seeded!
 
 ---
@@ -30,6 +30,17 @@ npm install
 npm run dev
 ```
 * **URL**: `http://localhost:5173` or `http://localhost:5174`
+* **API URL**: Copy `frontend/.env.example` to `.env` and set `VITE_API_BASE_URL` when the backend is not running at `http://localhost:8082`.
+
+---
+
+## Production Deployment
+
+* **Frontend**: https://event-management-system-smoky-xi.vercel.app/
+* **Backend API**: https://event-management-system-production-45a7.up.railway.app/
+* **Railway service root**: `/backend`
+
+Railway supplies `PORT` automatically. Set `JWT_SECRET` to a stable value of at least 32 bytes so login tokens remain valid after a restart, and set `CORS_ALLOWED_ORIGINS` when adding another frontend origin. The default H2 database is ephemeral; attach a managed database and supply the datasource variables above when data must survive a redeploy.
 
 ---
 

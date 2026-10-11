@@ -55,7 +55,7 @@ function Login({ onLoginSuccess }) {
       const msg =
         err.response?.data ||
         (err.message === "Network Error"
-          ? "Unable to connect to backend server. Please verify port 8082 is online."
+          ? "Unable to connect to the backend server. Please verify the API deployment is online."
           : "Invalid email or password credentials.");
       setErrorMsg(typeof msg === "string" ? msg : "Authentication failed.");
     } finally {
