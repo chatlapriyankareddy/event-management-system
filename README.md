@@ -7,7 +7,7 @@ A complete, full-stack **Event Management System** developed with **Spring Boot 
 ## 🚀 Quick Start Guide
 
 ### 1. Backend (`backend/`)
-The backend is built with Spring Boot, Spring Security (JWT), and JPA.
+The backend is built with Spring Boot, Spring Security (JWT), and JPA..
 
 ```bash
 cd backend
